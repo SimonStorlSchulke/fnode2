@@ -1,0 +1,16 @@
+.connection .main-path {
+    fill: none;
+    stroke-width: 13px;
+    pointer-events:all;
+
+    &:hover {
+       stroke: red; 
+    }
+}
+
+.connection {
+    overflow: visible !important;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}

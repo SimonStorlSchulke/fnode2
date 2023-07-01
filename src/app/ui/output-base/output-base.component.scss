@@ -1,0 +1,14 @@
+
+.node-item, .node-output {
+    height: 38px;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.node-item span, .node-item input {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

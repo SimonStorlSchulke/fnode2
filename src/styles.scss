@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+.node-item,
+.node-output {
+  height: 38px;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.node-item span,
+.node-item input {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-control {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+}
+
+
+.socket {
+  width: 15px;
+  height: 15px;
+  background-color: red; //Default color - usually overriden by socket component
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.socket-in {
+  left: -22px;
+}
+
+.socket-out {
+  right: -15px;
+}

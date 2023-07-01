@@ -1,0 +1,6 @@
+<div [style.top]="posY.toString()+'px'" [style.left]="posX.toString()+'px'" class="node-base" cdkDrag (cdkDragMoved)="this.dragService.drag()">
+    <div class="node-title">{{name}}</div>
+    <div class="node-content">
+        <ng-content></ng-content>
+    </div>
+  </div>
