@@ -83,6 +83,7 @@ export class SocketLinkComponent implements AfterViewInit, OnDestroy {
     ]
 
     this.path.setAttribute("d", `M ${p1[0]} ${p1[1]} C ${p1b[0]} ${p1b[1]} ${p2b[0]} ${p2b[1]} ${p2[0]} ${p2[1]}`);
-    
+    this.elRef.nativeElement.querySelector("linearGradient").setAttribute("x1", `${p1[0]}px`);
+    this.elRef.nativeElement.querySelector("linearGradient").setAttribute("x2", `${p2[0]}px`);
   }
 }
