@@ -1,5 +1,5 @@
-<div style="width: 900px; height: 600px;" class="node-editor-container">
-  <div class="node-editor-grid">
+<div style="width: 100dvw; height: 100dvh; overflow: hidden;" class="node-editor-container">
+  <div [style.transform]="'scale('+dragService.zoomFactor+')'" [style.width]="100 / dragService.zoomFactor + '%'" [style.height]="100 / dragService.zoomFactor + '%'" class="node-editor-grid">
     <ui-node-base [name]="'My Node 1'" #testnode1 [posX]="100" [posY]="100">
       <ui-output-color #op [name]="'Testoutput'"></ui-output-color>
       <ui-input-color #inputBaseColor [name]="'Base Color'"></ui-input-color>
@@ -11,7 +11,13 @@
       <ui-input-color #inputRimColorB [name]="'Rim Color'"></ui-input-color>
     </ui-node-base>
 
+    <ui-node-base [name]="'My Node 3'" #testnode2 [posX]="550" [posY]="20">
+      <ui-input-color #inputRimColorC [name]="'Base Color'"></ui-input-color>
+      <ui-input-color #inputRimColorD [name]="'Rim Color'"></ui-input-color>
+    </ui-node-base>
+
     <ui-socket-link [socket1]="this.op" [socket2]="this.inputRimColorB"></ui-socket-link>
+    <ui-socket-link [socket1]="this.op" [socket2]="this.inputRimColorC"></ui-socket-link>
   </div>
 </div>
 

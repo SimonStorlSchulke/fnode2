@@ -12,8 +12,20 @@
     cursor: move;
 
     &:active {
+        box-shadow: 0px 0px 30px #000b;
+      }
+    &.selected {
         box-shadow: 0 0 0 2pt rgb(129, 129, 129),
-                    0px 0px 30px #000b;
+                    0px 0px 20px #0006;
+
+        &:active {
+            box-shadow: 0 0 0 2pt rgb(129, 129, 129),
+            0px 0px 30px #000b;
+        }
+      }
+
+      &:hover .close {
+        opacity: 1;
       }
 }
 
@@ -25,6 +37,26 @@
     padding: 8px;
     font-weight: bold;
     border-radius: 5px 5px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+
+    .close {
+        background: rgba(0, 0, 0, 0.432);
+        margin: -8px;
+        width: 30px;
+        text-align: center;
+        padding-top: 5px;
+        border-radius: 0 5px 0 0;
+        box-sizing: border-box;
+        display: inline-block;
+        opacity: 0;
+        transition: opacity 0.2s;
+
+        &:hover {
+            background-color: rgb(157, 0, 0);
+            cursor: pointer;
+        }
+    }
 }
 
 .node-content {

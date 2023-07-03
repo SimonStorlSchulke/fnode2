@@ -1,5 +1,8 @@
-<div [style.top]="posY.toString()+'px'" [style.left]="posX.toString()+'px'" class="node-base" cdkDrag (cdkDragMoved)="this.dragService.drag()">
-    <div class="node-title">{{name}}</div>
+<div [class.selected]="selected" (mousedown)="select()" [style.top]="posY.toString()+'px'" [style.left]="posX.toString()+'px'" class="node-base" cdkDrag (cdkDragMoved)="this.dragService.drag()">
+    <div class="node-title">
+        <span>{{name}}</span>
+        <span class="close">✖</span>
+    </div>
     <div class="node-content">
         <ng-content></ng-content>
     </div>

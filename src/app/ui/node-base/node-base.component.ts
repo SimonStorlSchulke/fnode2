@@ -14,6 +14,12 @@ export class NodeBaseComponent {
   @Input() name: string = "Node Name";
   @Input() posX: number = 100;
   @Input() posY: number = 100;
+  selected = false;
 
   constructor(protected dragService: DragService) {}
+
+  select() {
+    this.selected = !this.selected;
+    console.log("Click")
+  }
 }
